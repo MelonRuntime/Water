@@ -4,14 +4,7 @@ const pgMelon = {
     query: dbQuery
 }
 
-const base = pgMelon.query("table", {
-    host: 'string',
-    port: 1234,
-    database: 'string',
-    user: 'string',
-    password: 'string'
-}, true)
+export { pgMelon }
 
-base.select("field").where('a = 1').orderBy("id").limit(10).result<string>()
-
-//export { pgMelon }
+// where of Enumerable not working
+// Enumerable last() not typed correctly

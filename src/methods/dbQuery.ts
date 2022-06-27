@@ -26,6 +26,11 @@ function dbQuery(tableName: string, connectionInfo: DbConnection, logQuery: bool
             return this
         }
 
+        this.orderByDesc = (fieldName: string) => {
+            sql.push(`ORDER BY ${fieldName} DESC`)
+            return this
+        }
+
         this.limit = (quantity: number) => {
             sql.push(`LIMIT ${quantity}`)
             return this
