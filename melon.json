@@ -1,7 +1,7 @@
 {
-    "name": "pg-melon",
-    "description": "pg-melon is a micro-ORM + QueryBuilder designed to facilitate queries and operations on PostgreSQL databases",
-    "version": "0.0.1",
-    "website": "https://github.com/MelonRuntime/pg-melon",
+    "name": "water-melon-kit",
+    "description": "Water is a micro-ORM + QueryBuilder designed to facilitate queries and operations on PostgreSQL databases",
+    "version": "0.0.5",
+    "website": "https://github.com/MelonRuntime/Water",
     "entryPoint": "src/index.js"
 }
