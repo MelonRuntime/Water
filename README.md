@@ -8,15 +8,22 @@ Water is a micro-ORM + QueryBuilder designed to facilitate queries and operation
 ## Usage
 
 - **Setting up Water and your connection info**
-```ts
-import Water = require("water-melon-kit") 
-import { DbConnection } from "water-melon-kit/src/types/DbConection"
+
+    - Importing the basic needs
+
+        ```ts
+        import Water = require("water-melon-kit") 
+        import { DbConnection } from "water-melon-kit/src/types/DbConection"
+        ```
+//Setup connection information from the environment
 
 const connection: DbConnection = {
-    host: environment.getVariable("PG_HOST"),
     port: 5432,
+    host: environment.getVariable("PG_HOST"),
     database: environment.getVariable("PG_DATABASE"),
     user: environment.getVariable("PG_USER  "),
     password: environment.getVariable("PG_PASSWORD")
 }
+
+const water = Water(connection, true)
 ```
