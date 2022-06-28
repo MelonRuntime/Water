@@ -1,7 +1,3 @@
-## 🍈 MelonJS Project
-
-| Command | Description |
-| ------- | ----------- |
-| `npm i melon-runtime -g` | Installs MelonJS (requires .NET 6 SDK and Runtime) |
-| `npm install` | Installs the required MelonJS types |
-| `npm run go` | Run the project |
+## pg-melon
+`v0.0.1`
+pg-melon is a micro-ORM + QueryBuilder designed to facilitate queries and operations on PostgreSQL databases
