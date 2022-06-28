@@ -12,17 +12,4 @@ const pgMelon = (connectionInfo: DbConnection, logQuery: boolean = false) => {
     }
 }
 
-const a = pgMelon({
-    host: "localhost",
-    port: 5432,
-    database: "postgres",
-    user: "postgres",
-    password: "123"
-}, true)
-
-console.log(a.query("newtable").select("*").where("column1 = 'baaaaaab'").result<any>().elements())
-
 export { pgMelon }
-
-// where of Enumerable not working
-// Enumerable last() not typed correctly
