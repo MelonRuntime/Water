@@ -4,6 +4,6 @@
       "types": [
         "melon-types"
       ],
-      "lib": [ "es2015", "DOM" ]
+      "lib": [ "es2017", "DOM" ]
     }
 }
