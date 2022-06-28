@@ -93,6 +93,33 @@ function dbAction(tableName: string, connectionInfo: DbConnection, logQuery: boo
                     return result
                 }
             }
+        },
+        insert: function (fieldValues: Record<string, any>) {
+            let sqlString = `INSERT INTO ${this._tableName}`
+
+            const fields = Object.keys(fieldValues)
+            const values = Object.values(fieldValues).map(value => {
+                return typeof value === "string" ? `'${value}'` : value
+            })
+
+            sqlString = sqlString += ` (${fields.join(", ").replace(", )", "")}) VALUES`
+            sqlString = sqlString += ` (${values.join(", ").replace(", )", "")});`
+
+            const client: DatabaseClient = new PgClient(
+                connectionInfo.host,
+                connectionInfo.port,
+                connectionInfo.database,
+                connectionInfo.user,
+                connectionInfo.password
+            )
+
+            if(logQuery) {
+                console.log(sqlString)
+            }
+
+            const result = client.executeNonQuery(sqlString)
+
+            return result
         }
     }
 

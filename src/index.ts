@@ -17,9 +17,8 @@ const a = pgMelon({
     password: "123"
 }, true)
 
-console.log(a.action("newtable").update({column1: "baaaaaab"}).where("column1 = 'test'"))
+console.log(a.action("newtable").insert({column1: "baaaaaab"}))
 
-//TODO CREATE TABLE AND INSERT IN TABLE FUNCTIONS
 
 export { pgMelon }
 

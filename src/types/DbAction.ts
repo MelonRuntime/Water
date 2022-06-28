@@ -10,7 +10,8 @@ type DbAction = {
     remove: () => {
         where: (condition: string) => number,
         all: () => number 
-    }
+    },
+    insert: (fieldValues: Record<string, any>) => number
 }
 
 export { DbAction }
