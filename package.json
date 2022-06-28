@@ -1,6 +1,6 @@
 {
   "name": "water-melon-kit",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Victória Rose",
   "license": "MIT",
   "description": "Water is a micro-ORM + QueryBuilder designed to facilitate queries and operations on PostgreSQL databases",
