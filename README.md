@@ -5,6 +5,12 @@ Water is a micro-ORM + QueryBuilder designed to facilitate queries and operation
 
 <hr>
 
+## Installation
+
+```bash
+npm install water-melon-kit
+```
+
 ## Usage
 
 - **Importing the basic needs for your project**
