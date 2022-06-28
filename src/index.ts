@@ -19,6 +19,8 @@ const a = pgMelon({
 
 console.log(a.action("newtable").update({column1: "baaaaaab"}).where("column1 = 'test'"))
 
+//TODO CREATE TABLE AND INSERT IN TABLE FUNCTIONS
+
 export { pgMelon }
 
 // where of Enumerable not working
