@@ -1,5 +1,5 @@
-import { pgMelon } from "..";
+import { Water} from "..";
 
 declare module "pg-melon" {
-    export = pgMelon
+    export = Water
 }

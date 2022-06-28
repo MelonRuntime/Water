@@ -1,4 +1,4 @@
-## pg-melon
+## 🍉 Water 
 `v0.0.1`
 
-pg-melon is a micro-ORM + QueryBuilder designed to facilitate queries and operations on PostgreSQL databases
+Water is a micro-ORM + QueryBuilder designed to facilitate queries and operations on PostgreSQL databases designed to work in MelonRuntime.

@@ -3,7 +3,7 @@ import { dbQuery } from "./methods/dbQuery"
 import { executeRaw } from "./methods/executeRaw";
 import { DbConnection } from "./types/DbConection";
 
-const pgMelon = (connectionInfo: DbConnection, logQuery: boolean = false) => { 
+const Water = (connectionInfo: DbConnection, logQuery: boolean = false) => { 
     return {
         query: (tableName: string) => dbQuery(tableName, connectionInfo, logQuery),
         action: (tableName: string) => dbAction(tableName, connectionInfo, logQuery),
@@ -12,4 +12,4 @@ const pgMelon = (connectionInfo: DbConnection, logQuery: boolean = false) => {
     }
 }
 
-export { pgMelon }
+export { Water }
