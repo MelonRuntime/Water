@@ -1,6 +1,6 @@
 {
   "name": "water-melon-kit",
-  "version": "0.0.7",
+  "version": "0.0.17",
   "author": "Victória Rose",
   "license": "MIT",
   "description": "Water is a micro-ORM + QueryBuilder designed to facilitate queries and operations on PostgreSQL databases",
@@ -12,8 +12,13 @@
     "melonruntime",
     "water"
   ],
-  "types": "src/types/main.d.ts",
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "devDependencies": {
+    "typescript": "latest",
     "melon-types": "latest"
   }
 }

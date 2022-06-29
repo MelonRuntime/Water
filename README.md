@@ -17,14 +17,13 @@ npm install water-melon-kit
 - **Importing the basic needs for your project**
 
     ```ts
-    import Water = require("water-melon-kit") 
-    import { DbConnection } from "water-melon-kit/src/types/DbConnection"
+    import { Water } from "water-melon-kit"
     ```
 
         
 - **Setting your connection info from the environment**
     ```ts
-    const connection: DbConnection = {
+    const connection = {
         port: 5432,
         host: environment.getVariable("PG_HOST"),
         database: environment.getVariable("PG_DATABASE"),
