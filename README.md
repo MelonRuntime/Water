@@ -26,7 +26,7 @@ npm install water-melon-kit
         port: 5432,
         host: environment.getVariable("PG_HOST"),
         database: environment.getVariable("PG_DATABASE"),
-        user: environment.getVariable("PG_USER  "),
+        user: environment.getVariable("PG_USER"),
         password: environment.getVariable("PG_PASSWORD")
     }
     ```
