@@ -18,7 +18,7 @@ npm install water-melon-kit
 
     ```ts
     import Water = require("water-melon-kit") 
-    import { DbConnection } from "water-melon-kit/src/types/DbConection"
+    import { DbConnection } from "water-melon-kit/src/types/DbConnection"
     ```
 
         
