@@ -1,4 +1,4 @@
-import { DbConnection } from "../types/DbConection";
+import { DbConnection } from "../types/DbConnection";
 import { DbQuery } from "../types/DbQuery";
 import { executeRaw } from "./executeRaw";
 

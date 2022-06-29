@@ -1,7 +1,7 @@
 import { dbAction } from "./methods/dbAction";
 import { dbQuery } from "./methods/dbQuery"
 import { executeRaw } from "./methods/executeRaw";
-import { DbConnection } from "./types/DbConection";
+import { DbConnection } from "./types/DbConnection";
 
 const Water = (connectionInfo: DbConnection, logQuery: boolean = false) => { 
     return {

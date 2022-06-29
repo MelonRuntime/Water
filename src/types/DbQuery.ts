@@ -1,4 +1,4 @@
-import { DbConnection } from "./DbConection"
+import { DbConnection } from "./DbConnection"
 
 type DbQuery = {
     _tableName: string,

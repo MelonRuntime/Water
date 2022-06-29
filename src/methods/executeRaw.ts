@@ -1,4 +1,4 @@
-import { DbConnection } from "../types/DbConection"
+import { DbConnection } from "../types/DbConnection"
 const { PgClient } = data
 
 const executeRaw = (connectionInfo: DbConnection, logQuery: boolean) => {

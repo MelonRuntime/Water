@@ -1,5 +1,5 @@
 import { DbAction } from "../types/DbAction"
-import { DbConnection } from "../types/DbConection"
+import { DbConnection } from "../types/DbConnection"
 import { executeRaw } from "./executeRaw"
 
 function dbAction(tableName: string, connectionInfo: DbConnection, logQuery: boolean = false) {
