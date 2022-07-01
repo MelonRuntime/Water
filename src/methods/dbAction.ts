@@ -1,6 +1,8 @@
+import { actionDefaultDisallows } from "../consts/disallowDefaults";
 import { DbAction } from "../types/DbAction"
 import { DbConnection } from "../types/DbConnection"
 import { executeRaw } from "./executeRaw"
+import { prepare } from "./prepare";
 
 function dbAction(tableName: string, connectionInfo: DbConnection, logQuery: boolean = false) {
     const res = {
@@ -25,6 +27,7 @@ function dbAction(tableName: string, connectionInfo: DbConnection, logQuery: boo
         
                     sqlString = sqlString += ` WHERE ${condition}`;
                     sql.push(sqlString);
+                    sql = sql.map(expression => prepare(expression, actionDefaultDisallows()));
                     return executeRaw(connectionInfo, logQuery).action(sql);
                 },
                 all: () => {
@@ -41,6 +44,7 @@ function dbAction(tableName: string, connectionInfo: DbConnection, logQuery: boo
                     })
         
                     sql.push(sqlString);
+                    sql = sql.map(expression => prepare(expression, actionDefaultDisallows()));
                     return executeRaw(connectionInfo, logQuery).action(sql);
                 }
             }
@@ -52,10 +56,12 @@ function dbAction(tableName: string, connectionInfo: DbConnection, logQuery: boo
                 where: (condition: string) => {
                     sqlString = sqlString += `WHERE ${condition}`;
                     sql.push(sqlString);
+                    sql = sql.map(expression => prepare(expression, actionDefaultDisallows()));
                     return executeRaw(connectionInfo, logQuery).action(sql);
                 },
                 all: () => {
                     sql.push(sqlString);
+                    sql = sql.map(expression => prepare(expression, actionDefaultDisallows()));
                     return executeRaw(connectionInfo, logQuery).action(sql);
                 }
             }
@@ -71,6 +77,7 @@ function dbAction(tableName: string, connectionInfo: DbConnection, logQuery: boo
             sqlString = sqlString += ` (${fields.join(", ").replace(", )", "")}) VALUES`;
             sqlString = sqlString += ` (${values.join(", ").replace(", )", "")});`;
 
+            sqlString = prepare(sqlString, actionDefaultDisallows());
             const result = executeRaw(connectionInfo, logQuery).action(sqlString.split(" "));
 
             return result;
