@@ -43,7 +43,7 @@ npm install water-melon-kit
 
     Example:
     ```ts
-    type User {
+    type User = {
         id: number,
         name: string
     }
