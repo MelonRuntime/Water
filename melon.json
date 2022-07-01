@@ -1,7 +1,7 @@
 {
     "name": "water-melon-kit",
     "description": "Water is a micro-ORM + QueryBuilder designed to facilitate queries and operations on PostgreSQL databases",
-    "version": "0.0.7",
+    "version": "0.0.18",
     "website": "https://github.com/MelonRuntime/Water",
-    "entryPoint": "src/tests/locals/entry.js"
+    "entryPoint": "build/index.js"
 }
