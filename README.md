@@ -48,7 +48,7 @@ npm install water-melon-kit
         name: string
     }
     
-    const usersQuery = water.query("users").orderBy("id");
+    const usersQuery = water.query("users").select("*").orderBy("id");
     const users = usersQuery.result<User>().elements();
     
     console.log(users); //[{id: 1, name: "Nicolas Lopes"}, {id: 2, name: "Guilherme Noghartt"}...]
