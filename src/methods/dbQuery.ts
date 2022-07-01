@@ -1,6 +1,8 @@
+import { queryDefaultDisallows } from "../consts/disallowDefaults";
 import { DbConnection } from "../types/DbConnection";
 import { DbQuery } from "../types/DbQuery";
 import { executeRaw } from "./executeRaw";
+import { prepare } from "./prepare";
 
 function dbQuery(tableName: string, connectionInfo: DbConnection, logQuery = false) {
     const res = {
@@ -34,7 +36,8 @@ function dbQuery(tableName: string, connectionInfo: DbConnection, logQuery = fal
                     return this.select(field, sql, false);
                 },
                 result: () => {
-                    return executeRaw(connectionInfo, logQuery).query(sql)
+                    sql = sql.map(expression => prepare(expression, queryDefaultDisallows()));
+                    return executeRaw(connectionInfo, logQuery).query(sql);
                 } 
             }
         }
